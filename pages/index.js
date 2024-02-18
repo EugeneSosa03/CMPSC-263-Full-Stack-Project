@@ -35,7 +35,7 @@ export default function Home() {
 
 const Styletext = styled.div`
   color: red;
-  background: black;
+  background: white;
   text-align: center;
 `
 
