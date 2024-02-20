@@ -1,35 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import React, {useState} from 'react';
+import Link from 'next/link';
 
-
-
-const [name, setName] = setName('Home');
-
-function ChangeName(){
-    setName(() => name
-)
-}
 
 const Navbar = () => {
   return (
-    <Container>
-        <LogoBox> 
-            Text Logo
+    <NavBarContainer>
+        <LogoBox>
+            <Link href='/'>
+               Classic Game Hub 
+            </Link>
         </LogoBox>
         <ButtonHolder>
-            <Buttons> Home </Buttons>
-            <Buttons> Menu </Buttons>
-            <Buttons> Hello </Buttons>
-            <Buttons> Chicken </Buttons>
+            <Buttons>SignUp/Login</Buttons>
+            
         </ButtonHolder>
         
-    </Container>
+    </NavBarContainer>
   )
 }
 
 
-const Container = styled.div`
+const NavBarContainer = styled.div`
     width: 96vw;
     display: flex;
     flex-direction: row;
@@ -41,31 +33,32 @@ const Container = styled.div`
     padding-top: 1vw;
     padding-bottom: 1vw;
 
-    align-items: center;
+    // align-items: center;
 `
+
+
 const LogoBox = styled.div`
-    font-size: 2vw; 
+    font-size: 4vw; 
     font-weight: bold;
+    //background: white;
 
 `
 
 const ButtonHolder = styled.div`
+ 
     display: flex;
     align-items: center;
     gap: 1vw;
-
     
 `
 
 const Buttons = styled.button`
+    padding: 0.25vw;
+
     cursor: pointer;
     font-size: 2vw;
     border-radius: 0.5vw;
     transtion: 0.5s ease-all;
-
-
-    &:hover{
-        background-color: yellow;
     }
 `
 
