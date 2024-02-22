@@ -13,9 +13,7 @@ const Navbar = () => {
         </LogoBox>
         <ButtonHolder>
             <Buttons>SignUp/Login</Buttons>
-            
         </ButtonHolder>
-        
     </NavBarContainer>
   )
 }

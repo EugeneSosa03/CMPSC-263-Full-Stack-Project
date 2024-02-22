@@ -7,8 +7,6 @@ import styled from "styled-components";
 
 import Link from 'next/link';
 
-
-
 const ParentContainer = styled.div`
   padding: 0vw;
   margin: 0vw;
@@ -36,9 +34,7 @@ export default function Home() {
       <GameContainer>
         <Gamebar/>
       </GameContainer>
-      
-
-      
+    
       </ParentContainer>
       </>
   );

@@ -3,15 +3,25 @@ import styled from 'styled-components'
 import Navbar from '@/components/Navbar'
 
 
-
+const ParentContainer = styled.div`
+    margin: 0vw;
+    padding: 0vw;
+    width: 100vw;
+    height: 100vw;
+    align-items: center;
+    justify-content: center;
+`
 
 export default function index() {
     return (
-      <NavBarContainer>
+        <ParentContainer>
+        <NavBarContainer>
   
       <Navbar/>
-        <iframe src='https://cdn.htmlgames.com/DailyWordSearch/'></iframe>
+        
       </NavBarContainer>
+      
+        </ParentContainer>
     )
   }
   
@@ -28,4 +38,10 @@ export default function index() {
       padding-bottom: 1vw;
   
       // align-items: center;
+  `
+
+  const Game = styled.iframe`
+    width: 30vw;
+    height: 30vw;
+    src: https://cdn.htmlgames.com/DailyWordSearch/;
   `
