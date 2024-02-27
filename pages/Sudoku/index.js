@@ -3,6 +3,14 @@ import React from 'react'
 import styled from "styled-components";
 import Navbar from "@/components/Navbar";
 
+const ParentContainer = styled.div`
+    display: flex;
+    margin: 0vw;
+    padding: 0vw;
+    background-color: #bf8040 ;
+    align-items: center;
+    justify-content: center;
+`
 
 export default function Home() {
     return (
@@ -14,15 +22,12 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
    
-        <Header>    
-            Sudoku
-        </Header>
+        <ParentContainer>
+          <iframe width={500} height={500} src="https://cdn.htmlgames.com/DailySudoku/"></iframe>
+        </ParentContainer>    
+        
               
       </>
     );
   }
 
-  const Header = styled.h1`
-    font-size: 4vw;
-    color: red;
-  `

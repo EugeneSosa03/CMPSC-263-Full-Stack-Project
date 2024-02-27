@@ -5,19 +5,17 @@ import Gamebar from "@/components/Gamebar";
 
 import styled from "styled-components";
 
+import { useContext } from "react";
 import Link from 'next/link';
+
 
 const ParentContainer = styled.div`
   padding: 0vw;
   margin: 0vw;
+  height: 100%;
 `
 
-const GameContainer = styled.div`
-  width: 60vw;
-  height: 40vw;
-  align-items: center;
-  padding-left: 1vw;
-`
+
 export default function Home() {
   return (
     <>
@@ -28,28 +26,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <ParentContainer>
-      <Navbar />
+    <ParentContainer>
 
-      <GameContainer>
-        <Gamebar/>
-      </GameContainer>
     
-      </ParentContainer>
+      <Gamebar/>
+    
+  
+    </ParentContainer>
+   
       </>
   );
 }
 
-const Styletext = styled.div`
-  color: red;
-  background: black;
-  text-align: center;
-`
 
-const RightSection = styled.button`
-background: red;
-border: 2px solid black;
-height: 300px;
-width: 300px;
-`
 

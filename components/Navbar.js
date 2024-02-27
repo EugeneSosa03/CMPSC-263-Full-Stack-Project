@@ -6,10 +6,9 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <NavBarContainer>
-        <LogoBox>
-            <Link href='/'>
-               Classic Game Hub 
-            </Link>
+        <LogoBox> <Link href="/">
+            Classic Game Hub
+        </Link>
         </LogoBox>
         <ButtonHolder>
             <Buttons>SignUp/Login</Buttons>
@@ -18,20 +17,20 @@ const Navbar = () => {
   )
 }
 
-
 const NavBarContainer = styled.div`
-    width: 96vw;
+    width: 100%;
+    height: 5vw;
     display: flex;
-    flex-direction: row;
+  //  flex-direction: row;
     justify-content: space-between;
     background: gainsboro;
 
-    padding-right: 2vw;
-    padding-left: 2vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    // padding-right: 2vw;
+    // padding-left: 2vw;
+    // padding-top: 1vw;
+    // padding-bottom: 1vw;
 
-    // align-items: center;
+     align-items: center;
 `
 
 

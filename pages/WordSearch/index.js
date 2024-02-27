@@ -4,10 +4,10 @@ import Navbar from '@/components/Navbar'
 
 
 const ParentContainer = styled.div`
+    display: flex;
     margin: 0vw;
     padding: 0vw;
-    width: 100vw;
-    height: 100vw;
+    background-color: #39ac39;
     align-items: center;
     justify-content: center;
 `
@@ -15,33 +15,8 @@ const ParentContainer = styled.div`
 export default function index() {
     return (
         <ParentContainer>
-        <NavBarContainer>
-  
-      <Navbar/>
-        
-      </NavBarContainer>
-      
+     <iframe height={500} width={500} src='https://cdn.htmlgames.com/DailyWordSearch/'></iframe>
         </ParentContainer>
     )
   }
-  
-  const NavBarContainer = styled.div`
-      width: 96vw;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background: gainsboro;
-  
-      padding-right: 2vw;
-      padding-left: 2vw;
-      padding-top: 1vw;
-      padding-bottom: 1vw;
-  
-      // align-items: center;
-  `
 
-  const Game = styled.iframe`
-    width: 30vw;
-    height: 30vw;
-    src: https://cdn.htmlgames.com/DailyWordSearch/;
-  `
