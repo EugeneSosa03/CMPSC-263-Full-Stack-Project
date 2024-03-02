@@ -23,8 +23,6 @@ justify-content: center;
 align-items: center;
 `
 
-
-
 export default function Home() {
 
 

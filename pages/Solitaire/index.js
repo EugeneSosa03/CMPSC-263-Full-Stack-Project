@@ -11,14 +11,12 @@ const ParentContainer = styled.div`
     background-color: #00802b;
     align-items: center;
     justify-content: center;
-`
-
-
+` 
 export default function index() {
     return (
         <ParentContainer>
           
-        <iframe width={500} height={500} src='https://cdn.htmlgames.com/ClassicSolitaire/'></iframe>
+          <iframe height={500} width={500} src='https://cdn.htmlgames.com/ClassicSolitaire/'></iframe>
 
         </ParentContainer>
       
