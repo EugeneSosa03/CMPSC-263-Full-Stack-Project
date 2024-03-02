@@ -9,8 +9,8 @@ const Gamebar = () => {
         <Container>
             
             <GameButtons><a href="/Sudoku">Sudoku</a></GameButtons>
-            <GameButtons><Link href="/WordSearch">Word Search</Link>
-            </GameButtons>
+            <Link href="/WordSearch"><GameButtons></GameButtons></Link>
+            
             <GameButtons><Link href="/Crossword">Crossword</Link></GameButtons>
             <GameButtons><Link href="/Solitaire">Solitaire</Link></GameButtons>
          
@@ -25,7 +25,7 @@ height: 30vw;
 width: 50vw;
 align-items: center;
 justify-content: space-evenly;
-
+margin: 2vw;
 border: 0.1vw solid black;
 `
 

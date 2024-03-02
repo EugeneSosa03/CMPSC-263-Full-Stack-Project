@@ -1,18 +1,41 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, {createContext, useContext, useState, useEffect} from 'react';
+import { useStateContext } from '@/context/UserContext';
+import styled from 'styled-components';
 import Link from 'next/link';
 
 
 const Navbar = () => {
+
+    const [loggedIn, setLoggedIn] = useState("Login");
+    const {user, setUser} = useStateContext();
+
+    useEffect (() => {
+
+    if (user != null){
+        setLoggedIn("Profile");
+    } else{
+        setLoggedIn("Login");
+    }
+
+    })
+    
+
+  
+
   return (
+
     <NavBarContainer>
-        <LogoBox> <Link href="/">
+       <Link href="/"> <LogoBox> 
             Classic Game Hub
+        
+            </LogoBox>
         </Link>
-        </LogoBox>
         <ButtonHolder>
-            <Buttons>SignUp/Login</Buttons>
+           
+            <Link href="/Login"><Buttons>{loggedIn}</Buttons></Link>
+        
         </ButtonHolder>
+
     </NavBarContainer>
   )
 }
@@ -38,6 +61,8 @@ const LogoBox = styled.div`
     font-size: 4vw; 
     font-weight: bold;
     //background: white;
+    border: 0.1 solid black;
+    border-radius: 0.1vw;
 
 `
 
