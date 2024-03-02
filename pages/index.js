@@ -1,20 +1,18 @@
-import Head from "next/head";
+import Head from "next/head";    
 //import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Gamebar from "@/components/Gamebar";
 
 import styled from "styled-components";
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Link from 'next/link';
 
 
 const ParentContainer = styled.div`
   padding: 0vw;
   margin: 0vw;
-  height: 100%;
 `
-
 
 export default function Home() {
   return (
@@ -28,10 +26,8 @@ export default function Home() {
       
     <ParentContainer>
 
-    
       <Gamebar/>
-    
-  
+
     </ParentContainer>
    
       </>

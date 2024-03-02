@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import {Noto_Sans_Georgian} from 'next/font/google';
 import Navbar from "@/components/Navbar";
+import { StateContext } from "@/context/UserContext";
+
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -20,8 +22,15 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
     <GlobalStyle />
+
+ <StateContext>
+
     <Navbar/>
+
+   
       <Component {...pageProps} />
+    </StateContext>
+      
     </>
   );
 }
