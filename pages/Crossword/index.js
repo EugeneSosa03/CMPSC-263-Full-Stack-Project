@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import Navbar from '@/components/Navbar';
 
 
+
+const ParentContainer = styled.div`
+    display: flex;
+    margin: 0vw;
+    padding: 0vw;
+    background-color: #bf8040 ;
+    height: 40.8vw;
+    align-items: center;
+    justify-content: center;
+`
+
+
 export default function index() {
   return (
 
@@ -14,13 +26,3 @@ export default function index() {
   )
 }
 
-const ParentContainer = styled.div`
-    display: flex;  
-  
- //   width: 100%;
-    background-color: #4db8ff;   
-    align-items: center;
-    justify-content: center;
-    
-    //padding-top: 4vw;
-`

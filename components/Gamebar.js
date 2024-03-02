@@ -8,11 +8,12 @@ const Gamebar = () => {
     return (
         <Container>
             
-            <GameButtons><a href="/Sudoku">Sudoku</a></GameButtons>
-            <Link href="/WordSearch"><GameButtons></GameButtons></Link>
             
-            <GameButtons><Link href="/Crossword">Crossword</Link></GameButtons>
-            <GameButtons><Link href="/Solitaire">Solitaire</Link></GameButtons>
+        <Link href="/Sudoku"> <GameButtons> Sudoku</GameButtons>    </Link>
+        <Link href="/WordSearch"><GameButtons>WordSearch</GameButtons></Link>
+            
+        <Link href="/Crossword"><GameButtons>Crossword</GameButtons></Link>
+        <Link href="/Solitaire"> <GameButtons>Solitaire</GameButtons></Link>
          
         </Container>
     )

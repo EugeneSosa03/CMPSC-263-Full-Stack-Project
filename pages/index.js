@@ -10,11 +10,52 @@ import Link from 'next/link';
 
 
 const ParentContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
   padding: 0vw;
   margin: 0vw;
 `
 
+const QuoteContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+
+
 export default function Home() {
+
+
+  const [quote, setQuote] = useState("Inspirational Quote Here");
+
+
+  async function getQuotes(){
+  const url = 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '61156e88a8mshfa79bb92b5ddf34p195e25jsnc13b1e151059',
+      'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+    }
+  };
+  
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    setQuote(result.text);
+    console.log(result.text);
+  } catch (error) {
+    console.error(error);
+  }
+  }
+
+  useEffect(() => {
+
+    getQuotes();
+  })
+
   return (
     <>
       <Head>
@@ -26,8 +67,15 @@ export default function Home() {
       
     <ParentContainer>
 
-      <Gamebar/>
 
+    <QuoteContainer>
+
+  <h1>{quote}</h1>
+
+  </QuoteContainer>
+      <Gamebar/>
+      
+      
     </ParentContainer>
    
       </>

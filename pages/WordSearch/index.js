@@ -8,6 +8,7 @@ const ParentContainer = styled.div`
     margin: 0vw;
     padding: 0vw;
     background-color: #39ac39;
+    height: 40.8vw;
     align-items: center;
     justify-content: center;
 `
